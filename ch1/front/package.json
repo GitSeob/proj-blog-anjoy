@@ -1,0 +1,21 @@
+{
+  "name": "proj-blog-anjoy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "anjoy",
+  "license": "ISC",
+  "dependencies": {
+    "next": "^9.1.1",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.6.0",
+    "nodemon": "^1.19.4",
+    "webpack": "^4.41.2"
+  }
+}
