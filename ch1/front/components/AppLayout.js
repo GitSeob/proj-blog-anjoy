@@ -1,9 +1,13 @@
 import React, {useState} from 'react';
-import { Menu, Input, Button } from 'antd';
+import { Menu, Input } from 'antd';
+import PropTypes from 'prop-types';
 import Link from 'next/link';
+import LoginForm from './LoginForm';
+import MiniProfile from './MiniProfile';
+
 
 const AppLayout = ({ children }) => {
-    const [isLoggedIn, setIsLoggedIn] = useState(false); 
+    const [isLoggedIn, setIsLoggedIn] = useState(true); 
     const {SubMenu} = Menu;
 
     const onLoggedIn = (e) => {
@@ -16,39 +20,29 @@ const AppLayout = ({ children }) => {
     }
     
     return (
-        <div>
-            <Menu mode="horizontal">
+        <div style={{display:'flex', flexDirection:'row'}}>
+            <Menu mode="vertical" style={{height:'100vh', width:'5000px'}}>
                 <Menu.Item key="home">
                     <Link href="/">
                         <a>ANJOY</a>
                     </Link>
                 </Menu.Item>
 
-                <Menu.Item key="mail">
+                <Menu.Item key="mail" >
                     <Input.Search enterButton style={{
-                        verticalAlign: 'middle'
+                        verticalAlign: 'middle',
+                        margin:'0',
+                        padding:'0'
                     }}/>
                 </Menu.Item>
 
                 {isLoggedIn ?
-                <Menu.Item key="profile">
-                    <Link href="/profile">
-                        <a><Button onClick={onLoggedIn}>PROFILE</Button></a>
-                    </Link>
-                </Menu.Item>
+                <SubMenu title="PROFILE">
+                    <MiniProfile/>
+                </SubMenu>
                 :
                 <SubMenu title="LOGIN">
-                    <Menu.Item key="notThing"> 로그인 컴포넌트 자리</Menu.Item>
-                    <Menu.Item key="login" >
-                        <Link href="/login">
-                            <a><Button onClick={onLoggedIn}>LOG IN</Button></a>
-                        </Link>
-                    </Menu.Item>
-                    <Menu.Item key="signup" >
-                        <Link href="/signup">
-                            <a><Button onClick={onLoggedIn}>SIGN UP</Button></a>
-                        </Link>
-                    </Menu.Item>
+                    <LoginForm/>
                 </SubMenu>
                 }
             </Menu>
@@ -56,5 +50,9 @@ const AppLayout = ({ children }) => {
         </div>
     );
 };
+
+AppLayout.propTypes = {
+    children: PropTypes.node,
+}
 
 export default AppLayout;

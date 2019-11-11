@@ -3,15 +3,15 @@ import AppLayout from '../components/AppLayout';
 import Head from 'next/head';
 import { Form, Input, Checkbox, Button } from 'antd';
 
+export const useInput = (initValue = null) => {
+    const [value, setter] = useState(initValue);
+    const handler = (e) => {
+        setter(e.target.value);
+    }
+    return [value, handler]
+}; // 커스텀 훅
+
 const Signup = () => {
-    
-    const useInput = (initValue = null) => {
-        const [value, setter] = useState(initValue);
-        const handler = (e) => {
-            setter(e.target.value);
-        }
-        return [value, handler]
-    }; // 커스텀 훅
 
     const [id, onChangeId] = useInput('');
     const [nickname, onChangeNickname] = useInput('');
