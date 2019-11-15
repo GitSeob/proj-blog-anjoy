@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 const TestCard = ({ post }) => {
     return (
         <div
-            key={+post.k} 
+            key={+post.createdAt} 
             style={{
             width:'calc(33.333% - 1.75rem)', 
             display:'flex', 
@@ -82,8 +82,11 @@ const TestCard = ({ post }) => {
                 <div style={{
                     borderBottom: '1px solid #e9ecef'
                 }}>
-                    <p style={{color:'#666699', marginBottom:'5px'}}>{post.User.nickname}</p>
-                    <h3>{post.postTitle}</h3>
+                    <p style={{color:'#666699', marginBottom:'5px'}}><a style={{textDecoration:'none', color:'inherit'}}>{post.User.nickname}</a></p>
+                    <h3><a style={{
+                        textDecoration:'none',
+                        color: 'inherit',
+                    }}>{post.postTitle}</a></h3>
                     <p style={{color:'#CCCCFF'}}>9999년9월9일</p>
                 </div>
                 <div style={{

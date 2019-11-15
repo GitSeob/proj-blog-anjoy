@@ -1,0 +1,167 @@
+webpackHotUpdate("static/development/pages/profile.js",{
+
+/***/ "./pages/profile.js":
+/*!**************************!*\
+  !*** ./pages/profile.js ***!
+  \**************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
+
+var _jsxFileName = "/Users/anjoy/popolpodopolapo/proj-blog-anjoy/ch1/front/pages/profile.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
+
+var editStyle = {
+  display: 'flex',
+  flexDirection: 'row',
+  marginLeft: '1rem',
+  marginBottom: '3rem'
+};
+
+var formName = Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])({
+  width: '5rem',
+  borderRight: '1px solid #e9ecef',
+  marginRight: '1rem'
+}, "width", 'inherit');
+
+var Profile = function Profile() {
+  return __jsx("div", {
+    style: {
+      width: '80%'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
+    },
+    __self: this
+  }, __jsx("div", {
+    style: {
+      margin: '5rem 1rem 0 1rem',
+      display: 'flex',
+      flexDirection: 'column',
+      backgroundColor: 'white',
+      borderRadius: '10px',
+      boxShadow: '0 0 4px #999'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21
+    },
+    __self: this
+  }, __jsx("h1", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29
+    },
+    __self: this
+  }, "\uB0B4\uC815\uBCF4"), __jsx("div", {
+    style: editStyle,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30
+    },
+    __self: this
+  }, __jsx("div", {
+    style: formName,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31
+    },
+    __self: this
+  }, " \uC544\uC774\uB514 "), __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32
+    },
+    __self: this
+  }, "\uC5EC\uAE30 \uC785\uB825")), __jsx("div", {
+    style: editStyle,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 34
+    },
+    __self: this
+  }, __jsx("div", {
+    style: formName,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35
+    },
+    __self: this
+  }, " \uBE44\uBC00\uBC88\uD638 "), __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36
+    },
+    __self: this
+  }, "\uC5EC\uAE30 \uC785\uB825")), __jsx("div", {
+    style: editStyle,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38
+    },
+    __self: this
+  }, __jsx("div", {
+    style: formName,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39
+    },
+    __self: this
+  }, " \uC774\uB984 "), __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40
+    },
+    __self: this
+  }, "\uC5EC\uAE30 \uC785\uB825"), __jsx("div", {
+    style: formName,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 42
+    },
+    __self: this
+  }, " \uB2C9\uB124\uC784 "), __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 43
+    },
+    __self: this
+  }, "\uC5EC\uAE30 \uC785\uB825")), __jsx("div", {
+    style: editStyle,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 45
+    },
+    __self: this
+  }, __jsx("div", {
+    style: formName,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 46
+    },
+    __self: this
+  }, " \uC774\uBA54\uC77C "), __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 47
+    },
+    __self: this
+  }, "\uC5EC\uAE30 \uC785\uB825"))));
+};
+
+Profile.propTypes = {};
+/* harmony default export */ __webpack_exports__["default"] = (Profile);
+
+/***/ })
+
+})
+//# sourceMappingURL=profile.js.d2a1506425ac97a9dd42.hot-update.js.map

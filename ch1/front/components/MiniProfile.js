@@ -1,7 +1,9 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 import PropTypes from 'prop-types';
 import {Card, Avatar, Button } from 'antd';
 import Link from 'next/link';
+import { useSelector, useDispatch } from 'react-redux';
+import { LOG_OUT_REQUEST } from '../reducers/user';
 
 const dummy = {
     nickname : 'anjoy',
@@ -9,6 +11,17 @@ const dummy = {
 }
 
 const MiniProfile = () => {
+    const dispatch = useDispatch();
+
+    const { me } = useSelector(state=>state.user)
+
+    const onLogout = useCallback(() => {
+        dispatch({
+            type: LOG_OUT_REQUEST
+        });
+        alert('로그아웃 되었습니다.')
+    }, [])
+
     return (
         <div style={{
             alignItems: 'center',
@@ -24,7 +37,7 @@ const MiniProfile = () => {
                 <div style={{
                     margin:'1rem'
                 }}>
-                    <img src={dummy.profileImage}
+                    <img src={me.profileImage}
                     style={{
                         display:'block',
                         objectFit:'cover',
@@ -33,7 +46,7 @@ const MiniProfile = () => {
                         height:'3rem'
                     }} />
                 </div>
-                <h2>{dummy.nickname}</h2><h4>님 환영합니다.</h4>
+                <h2>{me.nickname}</h2><h4>님 환영합니다.</h4>
             </div>
             <Link href="/profile">
                 <a>
@@ -45,7 +58,7 @@ const MiniProfile = () => {
                     <Button style={{width:'50%'}}> 내 블로그로 이동하기</Button>
                 </a>
             </Link>
-            <a><Button style={{width:'100%', backgroundColor:'#ff9999', color:'white', fontWeight:'bold'}}>로그아웃</Button></a>
+            <a><Button onClick={onLogout} style={{width:'100%', backgroundColor:'#ff9999', color:'white', fontWeight:'bold'}}>로그아웃</Button></a>
         </div>
     );
 };

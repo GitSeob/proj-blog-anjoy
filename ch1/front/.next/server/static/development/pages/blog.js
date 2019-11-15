@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -481,7 +481,7 @@ const TestCard = ({
   post
 }) => {
   return __jsx("div", {
-    key: +post.k,
+    key: +post.createdAt,
     style: {
       width: 'calc(33.333% - 1.75rem)',
       display: 'flex',
@@ -604,19 +604,39 @@ const TestCard = ({
       lineNumber: 85
     },
     __self: undefined
-  }, post.User.nickname), __jsx("h3", {
+  }, __jsx("a", {
+    style: {
+      textDecoration: 'none',
+      color: 'inherit'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 85
+    },
+    __self: undefined
+  }, post.User.nickname)), __jsx("h3", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 86
     },
     __self: undefined
-  }, post.postTitle), __jsx("p", {
+  }, __jsx("a", {
+    style: {
+      textDecoration: 'none',
+      color: 'inherit'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 86
+    },
+    __self: undefined
+  }, post.postTitle)), __jsx("p", {
     style: {
       color: '#CCCCFF'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 87
+      lineNumber: 90
     },
     __self: undefined
   }, "9999\uB1449\uC6D49\uC77C")), __jsx("div", {
@@ -632,7 +652,7 @@ const TestCard = ({
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89
+      lineNumber: 92
     },
     __self: undefined
   }, post.postContent)));
@@ -829,7 +849,7 @@ Blog.propTypes = {};
 
 /***/ }),
 
-/***/ 3:
+/***/ 5:
 /*!*****************************!*\
   !*** multi ./pages/blog.js ***!
   \*****************************/
