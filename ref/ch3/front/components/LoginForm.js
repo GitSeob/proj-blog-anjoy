@@ -7,13 +7,14 @@ import { loginAction } from '../reducers/user';
 
 const LoginForm = () => {
     const [id, onChangeId] = useInput('')
-    const [password, onChangePassword] = useInput('')
-    const dispatch = useDispatch()
+    const [password, onChangePassword] = useInput('');
+    const { isLoggedIn } = useSelector(state => state.user);
+    const dispatch = useDispatch();
 
     const onSubmitForm = useCallback((e) => {
         e.preventDefault()
         console.log('sub')
-        dispatch(loginAction)
+        dispatch(loginAction);
     }, [id, password])
 
     return (

@@ -15,9 +15,9 @@ import PostContainer from '../components/PostContainer';
 
 const Home = () => {
     return (
-        <div style={{display:'flex', flexDirection:'column', backgroundColor: '#EEEEEE', padding: '0 1.75rem'}}>
+        <div style={{display:'flex', flexDirection:'column', backgroundColor: '#EFEFEF', padding: '0 1.75rem', width:'80%'}}>
             <h1 style={{margin:'10px 30px'}}>어쩌구저쩌구</h1>
-            <hr style={{margin:'10px', width:'100vh'}}/>
+            <hr style={{margin:'10px', }}/>
             <PostContainer/>
         </div>
     );

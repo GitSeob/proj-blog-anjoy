@@ -89,7 +89,7 @@ const TestCard = ({ post }) => {
                 <div style={{
                     marginTop:'1.5rem',
                     lineHeight:'1.5rem',
-                    height:'4.5rem',
+                    height: post.image ? '4.5rem':'15rem',
                     overflowY:'hidden',
                     wordBreak:'break-all',
                     color: '#4c657d',
