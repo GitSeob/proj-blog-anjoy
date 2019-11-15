@@ -19,9 +19,9 @@ const Home = () => {
     const dispatch = useDispatch();
 
     useEffect(()=>{
-        // dispatch({
-        //     type: HELLO_POST
-        // })
+        dispatch({
+            type: 'HELLO_SAGA'
+        })
     }, [])
 
     return (

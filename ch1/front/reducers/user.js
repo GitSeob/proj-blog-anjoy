@@ -44,12 +44,6 @@ export const logoutAction = {
 
 const reducer = (state = initialState, action ) =>{
     switch (action.type){
-        case TEST:{
-            return{
-                ...state,
-                me: dummyUser,
-            }
-        }
 
         case SIGN_UP_REQUEST:{
             return{

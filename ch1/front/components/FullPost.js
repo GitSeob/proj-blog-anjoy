@@ -30,7 +30,7 @@ const FullPost = ({ post }) => {
 
     return (
         <div 
-            key={+post.postContent}
+            key={+post.createdAt}
             style={{
                 borderRadius:'5px', 
                 backgroundColor:'white', 
@@ -49,7 +49,7 @@ const FullPost = ({ post }) => {
                 margin:'0 1rem'}}
             >
               <div style={{display:'flex', flexDirection:'row', marginTop:'1rem', alignItems:'center'}}>
-                    <img src='https://cafeptthumb-phinf.pstatic.net/MjAxODEwMTdfMTEy/MDAxNTM5Nzc5MDQyNDgz.1c9fV0imO8toanzl4DG-9fb4-MLMbodpjdpApsBIbEAg.hgaKF2X2cmiO-hYT7T98uqXoNUenEshBmCdkoSLc7Zog.JPEG.ajjj12345/IMG_20181017_204128.jpg?type=w740'
+                    <img src={post.profileImage}
                         style={{
                             display:'block',
                             marginLeft: '.5rem',
@@ -59,12 +59,12 @@ const FullPost = ({ post }) => {
                             objectFit: 'cover'
                         }}
                     />
-                    <p style={{fontSize:'1.2rem', color:'#999', marginLeft:'.5rem'}}>anjoy</p>
+                    <p style={{fontSize:'1.2rem', color:'#999', marginLeft:'.5rem'}}>{post.nickname}</p>
                 </div>
 
 
 
-                <p style={{marginTop:'1rem',fontSize:'14px', color:'#e9ecef'}}>99년9월9일</p>
+                <p style={{marginTop:'1rem',fontSize:'14px', color:'#e9ecef'}}>{post.createAt}</p>
                 <h1 style={{}}>{post.postTitle}</h1>
             </div>
             <p style={{margin:'1rem', borderBottom:'1px solid #e9ecef', paddingBottom:'1rem'}}>{post.postContent}</p>

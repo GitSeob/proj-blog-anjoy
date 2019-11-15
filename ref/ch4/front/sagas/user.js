@@ -5,7 +5,7 @@ const HELLO_SAGA = 'HELLO_SAGA'
 const BYE_SAGA = 'BYE_SAGA'
 
 function* loginAPI(){
-
+    console.log('get saga')
 } // 서버에 fetch하는 부분
 
 function* login(){
