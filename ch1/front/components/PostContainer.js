@@ -18,7 +18,7 @@ const PostContainer = ( ) => {
         }}>
             {mainPosts.map((c)=>{
                 return (
-                    <TestCard key={c} post={c} />
+                    <TestCard key={+new Date(c.createdAt)} post={c} />
                 )
             })}
         </div>

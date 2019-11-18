@@ -25,7 +25,7 @@ const Posting = props => {
 
 
     return (
-        <div style={{backgroundColor:'#EFEFEF', width:'80%'}}>
+        <div style={{ width:'80%'}}>
             <div style={{ margin:'5rem 1rem 0 1rem'}}>
                 <Form onSubmit={onSubmitForm}>
                     <Input.TextArea value={text} maxLength={500} onChange={onChangeText} placeholder="글 쓰는 곳"/>

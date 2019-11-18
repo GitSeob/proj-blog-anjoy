@@ -25,7 +25,7 @@ const Home = () => {
     }, [])
 
     return (
-        <div style={{display:'flex', flexDirection:'column', backgroundColor: '#EFEFEF', padding: '0 1.75rem', width:'80%'}}>
+        <div style={{display:'flex', flexDirection:'column', padding: '0 1.75rem'}}>
             <h1 style={{margin:'10px 30px'}}>어쩌구저쩌구</h1>
             <hr style={{margin:'10px', }}/>
             <PostContainer/>

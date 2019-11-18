@@ -242,6 +242,29 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 const AppLayout = ({
   children
 }) => {
+  const menuStyle = {
+    padding: '.75rem 0 .75rem 0rem',
+    fontSize: '1.25rem',
+    display: 'flex',
+    textDecoration: 'none',
+    alignItems: 'center',
+    color: 'inherit'
+  };
+  const text = {
+    marginLeft: '1rem'
+  };
+  const searchContainer = {
+    width: '13rem',
+    height: '3rem',
+    borderRadius: '10px',
+    backgroundColor: '#FFF',
+    margin: '1rem',
+    boxShadow: '0 2px 8px #65a1ac',
+    display: 'flex',
+    flexDirection: 'row',
+    color: '#000',
+    alignItems: 'center'
+  };
   const {
     SubMenu
   } = antd__WEBPACK_IMPORTED_MODULE_1__["Menu"];
@@ -250,131 +273,223 @@ const AppLayout = ({
   } = Object(react_redux__WEBPACK_IMPORTED_MODULE_6__["useSelector"])(state => state.user);
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("div", {
     style: {
+      width: '100%',
+      height: '100%',
       display: 'flex',
-      flexDirection: ''
+      backgroundColor: '#e9ecef',
+      flexDirection: 'row',
+      outlineStyle: 'none'
     },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18
-    },
-    __self: undefined
-  }, __jsx(antd__WEBPACK_IMPORTED_MODULE_1__["Menu"], {
-    mode: "vertical",
-    style: {
-      height: '100vh',
-      width: '30%'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 19
-    },
-    __self: undefined
-  }, __jsx(antd__WEBPACK_IMPORTED_MODULE_1__["Menu"].Item, {
-    key: "home",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 20
-    },
-    __self: undefined
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
-    href: "/",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 21
-    },
-    __self: undefined
-  }, __jsx("a", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 22
-    },
-    __self: undefined
-  }, "ANJOY"))), __jsx(antd__WEBPACK_IMPORTED_MODULE_1__["Menu"].Item, {
-    key: "mail",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 26
-    },
-    __self: undefined
-  }, __jsx(antd__WEBPACK_IMPORTED_MODULE_1__["Input"].Search, {
-    enterButton: true,
-    style: {
-      verticalAlign: 'middle',
-      margin: '0',
-      padding: '0'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 27
-    },
-    __self: undefined
-  })), __jsx(antd__WEBPACK_IMPORTED_MODULE_1__["Menu"].Item, {
-    key: "recent",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 33
-    },
-    __self: undefined
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
-    href: "/",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 34
-    },
-    __self: undefined
-  }, __jsx("a", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 35
-    },
-    __self: undefined
-  }, "\uCD5C\uC2E0 \uAC8C\uC2DC\uBB3C"))), __jsx(antd__WEBPACK_IMPORTED_MODULE_1__["Menu"].Item, {
-    key: "hashtag",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 38
-    },
-    __self: undefined
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
-    href: "/hashtags",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 39
-    },
-    __self: undefined
-  }, __jsx("a", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 40
-    },
-    __self: undefined
-  }, "\uD0DC\uADF8 \uBCF4\uAE30"))), isLoggedIn ? __jsx(SubMenu, {
-    title: "PROFILE",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 44
     },
     __self: undefined
-  }, __jsx(_MiniProfile__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, __jsx("aside", {
+    style: {
+      backgroundImage: 'linear-gradient(#b8e3dc, #96dfce, #85cfd2)',
+      width: '15rem',
+      height: '100%',
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      display: 'flex',
+      flexDirection: 'column',
+      color: '#FFF'
+    },
     __source: {
       fileName: _jsxFileName,
       lineNumber: 45
     },
     __self: undefined
-  })) : __jsx(SubMenu, {
-    title: "LOGIN",
+  }, __jsx("a", {
+    href: "/",
+    style: {
+      padding: '0 1rem',
+      margin: '1.75rem 0',
+      fontSize: '2rem',
+      lineHeight: '2rem',
+      display: 'block',
+      position: 'relative',
+      color: 'inherit',
+      fontFamily: 'Inconsolata'
+    },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 55
     },
     __self: undefined
-  }, __jsx(_LoginForm__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, "anjoy"), __jsx("div", {
+    style: searchContainer,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 65
     },
     __self: undefined
-  }))), children), isLoggedIn && __jsx("div", {
+  }, __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 66
+    },
+    __self: undefined
+  }, __jsx("i", {
+    class: "material-icons",
+    style: {
+      color: '#85cfd2',
+      marginLeft: '1rem'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 67
+    },
+    __self: undefined
+  }, "search")), __jsx("input", {
+    type: "text",
+    placeholder: "search",
+    style: {
+      border: 0,
+      marginLeft: '.5rem',
+      color: '85cfd2'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 71
+    },
+    __self: undefined
+  })), __jsx("ul", {
+    style: {
+      color: 'inherit'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 73
+    },
+    __self: undefined
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    href: "/",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 74
+    },
+    __self: undefined
+  }, __jsx("a", {
+    style: menuStyle,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 74
+    },
+    __self: undefined
+  }, __jsx("i", {
+    class: "material-icons",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 75
+    },
+    __self: undefined
+  }, "thumb_up_alt"), __jsx("div", {
+    style: text,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 78
+    },
+    __self: undefined
+  }, "hot"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    href: "/blog",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 80
+    },
+    __self: undefined
+  }, __jsx("a", {
+    style: menuStyle,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 80
+    },
+    __self: undefined
+  }, __jsx("i", {
+    class: "material-icons",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 81
+    },
+    __self: undefined
+  }, "thumb_up_alt"), __jsx("div", {
+    style: text,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 84
+    },
+    __self: undefined
+  }, "blog"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    href: "/hashtags",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 86
+    },
+    __self: undefined
+  }, __jsx("a", {
+    style: menuStyle,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 86
+    },
+    __self: undefined
+  }, __jsx("i", {
+    class: "material-icons",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 87
+    },
+    __self: undefined
+  }, "thumb_up_alt"), __jsx("div", {
+    style: text,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 90
+    },
+    __self: undefined
+  }, "tags"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    href: "/profile",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 92
+    },
+    __self: undefined
+  }, __jsx("a", {
+    style: menuStyle,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 92
+    },
+    __self: undefined
+  }, __jsx("i", {
+    class: "material-icons",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 93
+    },
+    __self: undefined
+  }, "thumb_up_alt"), __jsx("div", {
+    style: text,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 96
+    },
+    __self: undefined
+  }, "login or profile"))))), __jsx("div", {
+    style: {
+      marginLeft: '15rem',
+      position: 'absolute',
+      width: 'calc(100% - 15rem)',
+      height: 'auto'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 102
+    },
+    __self: undefined
+  }, children)), isLoggedIn && __jsx("div", {
     style: {
       display: 'flex',
       position: 'fixed',
@@ -385,7 +500,7 @@ const AppLayout = ({
       borderRadius: '100%',
       width: '4rem',
       height: '4rem',
-      backgroundImage: 'linear-gradient(#9999CC, #CCCCFF)',
+      backgroundImage: 'linear-gradient(#b8e3dc, #96dfce, #85cfd2)',
       boxShadow: '0 2px 8px #e9ecef',
       zIndex: 999,
       alignItems: 'center',
@@ -393,20 +508,20 @@ const AppLayout = ({
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 107
     },
     __self: undefined
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
     href: "/posting",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 122
     },
     __self: undefined
   }, __jsx("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 123
     },
     __self: undefined
   }, __jsx("i", {
@@ -417,7 +532,7 @@ const AppLayout = ({
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 124
     },
     __self: undefined
   }, "post_add")))));
@@ -3039,14 +3154,41 @@ const rootReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"]
 /*!**************************!*\
   !*** ./reducers/post.js ***!
   \**************************/
-/*! exports provided: initialState, HELLO_POST, ADD_DUMMY, ADD_POST, addDummy, default */
+/*! exports provided: initialState, LOAD_MAIN_POSTS_REQUEST, LOAD_MAIN_POSTS_SUCCESS, LOAD_MAIN_POSTS_FAILURE, ADD_POST_REQUEST, ADD_POST_SUCCESS, ADD_POST_FAILURE, LOAD_USER_POSTS_REQUEST, LOAD_USER_POSTS_SUCCESS, LOAD_USER_POSTS_FAILURE, LOAD_HASHING_POSTS_REQUEST, LOAD_HASHING_POSTS_SUCCESS, LOAD_HASHING_POSTS_FAILURE, LIKE_POST_REQUEST, LIKE_POST_SUCCESS, LIKE_POST_FAILURE, UNLIKE_POST_REQUEST, UNLIKE_POST_SUCCESS, UNLIKE_POST_FAILURE, ADD_COMMENT_REQUEST, ADD_COMMENT_SUCCESS, ADD_COMMENT_FAILURE, LOAD_COMMENTS_REQUEST, LOAD_COMMENTS_SUCCESS, LOAD_COMMENTS_FAILURE, REMOVE_POST_REQUEST, REMOVE_POST_SUCCESS, REMOVE_POST_FAILURE, ADD_DUMMY, ADD_TEST_COMMENT, ADD_POST, addDummy, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initialState", function() { return initialState; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HELLO_POST", function() { return HELLO_POST; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LOAD_MAIN_POSTS_REQUEST", function() { return LOAD_MAIN_POSTS_REQUEST; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LOAD_MAIN_POSTS_SUCCESS", function() { return LOAD_MAIN_POSTS_SUCCESS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LOAD_MAIN_POSTS_FAILURE", function() { return LOAD_MAIN_POSTS_FAILURE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ADD_POST_REQUEST", function() { return ADD_POST_REQUEST; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ADD_POST_SUCCESS", function() { return ADD_POST_SUCCESS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ADD_POST_FAILURE", function() { return ADD_POST_FAILURE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LOAD_USER_POSTS_REQUEST", function() { return LOAD_USER_POSTS_REQUEST; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LOAD_USER_POSTS_SUCCESS", function() { return LOAD_USER_POSTS_SUCCESS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LOAD_USER_POSTS_FAILURE", function() { return LOAD_USER_POSTS_FAILURE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LOAD_HASHING_POSTS_REQUEST", function() { return LOAD_HASHING_POSTS_REQUEST; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LOAD_HASHING_POSTS_SUCCESS", function() { return LOAD_HASHING_POSTS_SUCCESS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LOAD_HASHING_POSTS_FAILURE", function() { return LOAD_HASHING_POSTS_FAILURE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LIKE_POST_REQUEST", function() { return LIKE_POST_REQUEST; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LIKE_POST_SUCCESS", function() { return LIKE_POST_SUCCESS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LIKE_POST_FAILURE", function() { return LIKE_POST_FAILURE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UNLIKE_POST_REQUEST", function() { return UNLIKE_POST_REQUEST; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UNLIKE_POST_SUCCESS", function() { return UNLIKE_POST_SUCCESS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UNLIKE_POST_FAILURE", function() { return UNLIKE_POST_FAILURE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ADD_COMMENT_REQUEST", function() { return ADD_COMMENT_REQUEST; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ADD_COMMENT_SUCCESS", function() { return ADD_COMMENT_SUCCESS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ADD_COMMENT_FAILURE", function() { return ADD_COMMENT_FAILURE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LOAD_COMMENTS_REQUEST", function() { return LOAD_COMMENTS_REQUEST; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LOAD_COMMENTS_SUCCESS", function() { return LOAD_COMMENTS_SUCCESS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LOAD_COMMENTS_FAILURE", function() { return LOAD_COMMENTS_FAILURE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "REMOVE_POST_REQUEST", function() { return REMOVE_POST_REQUEST; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "REMOVE_POST_SUCCESS", function() { return REMOVE_POST_SUCCESS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "REMOVE_POST_FAILURE", function() { return REMOVE_POST_FAILURE; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ADD_DUMMY", function() { return ADD_DUMMY; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ADD_TEST_COMMENT", function() { return ADD_TEST_COMMENT; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ADD_POST", function() { return ADD_POST; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addDummy", function() { return addDummy; });
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/objectSpread */ "./node_modules/@babel/runtime-corejs2/helpers/esm/objectSpread.js");
@@ -3061,8 +3203,10 @@ const initialState = {
     postTitle: '테스트',
     postContent: '대한민국의 가수 겸 탤런트. 본명은 이지은이며, 아이유(IU)는 예명이다. 아이유(IU)는 "음악으로 너와 내가 하나가 된다"라는 뜻을 가지고 있다. 2008년에 데뷔하였다. 국민 여동생이라고도 불렸다. 현 시대 여성 솔로 가수 중에서 독보적인 위치를 점하고 있는 한국 가요계의 현재진행형 레전드이자 그 어떤 장르도 소화해내는 만능형 가수라는 평가를 받는다.[22] 로엔 소속 가수 중에 듀엣이나 콜라보 없이 스스로의 힘으로 1위를 기록한 가수는 아이유가 유일하다.',
     image: 'https://scontent-icn1-1.cdninstagram.com/vp/559b8a8ece4f07cf6e7a457f600968b4/5E4BC5CB/t51.2885-15/e35/s1080x1080/72695011_515793855687177_6497185184176620114_n.jpg?_nc_ht=scontent-icn1-1.cdninstagram.com&_nc_cat=1',
-    createdAt: new Date()
-  }],
+    commentNumber: 0 // 해당 게시물 댓글 수 
+
+  } // 메인 화면에 보일 콘텐츠들
+  ],
   userBlog: {
     User: {
       id: 1,
@@ -3071,36 +3215,78 @@ const initialState = {
     },
     blogTitle: '짜증짜증 블로그',
     introBlog: '이 블로그는 즐겁지 않습니다.',
-    hashtag: ['#짜증', '#극혐', '#홀리쉿', '#개짜증'],
-    posts: [{
+    hashtag: ['#짜증', '#극혐', '#홀리쉿', '#개짜증'] // 특정 유저 블로그 들어가면 포스트 전체 보일 용도
+
+  },
+  addPostErrorReason: '',
+  //포스트 업로드 실패사유
+  isAddingPost: false,
+  //포스트 업로드 중 
+  postAdded: false,
+  isAddingComment: false,
+  commentAdded: false,
+  addCommentErrorReason: '',
+  userPosts: [{
+    id: 1,
+    nickname: 'anjoy',
+    profileImage: 'https://scontent-icn1-1.cdninstagram.com/vp/559b8a8ece4f07cf6e7a457f600968b4/5E4BC5CB/t51.2885-15/e35/s1080x1080/72695011_515793855687177_6497185184176620114_n.jpg?_nc_ht=scontent-icn1-1.cdninstagram.com&_nc_cat=1',
+    postTitle: '테스트',
+    postContent: '대한민국의 가수 겸 탤런트. 본명은 이지은이며, 아이유(IU)는 예명이다. 아이유(IU)는 "음악으로 너와 내가 하나가 된다"라는 뜻을 가지고 있다. 2008년에 데뷔하였다. 국민 여동생이라고도 불렸다. 현 시대 여성 솔로 가수 중에서 독보적인 위치를 점하고 있는 한국 가요계의 현재진행형 레전드이자 그 어떤 장르도 소화해내는 만능형 가수라는 평가를 받는다.[22] 로엔 소속 가수 중에 듀엣이나 콜라보 없이 스스로의 힘으로 1위를 기록한 가수는 아이유가 유일하다.',
+    image: 'https://scontent-icn1-1.cdninstagram.com/vp/559b8a8ece4f07cf6e7a457f600968b4/5E4BC5CB/t51.2885-15/e35/s1080x1080/72695011_515793855687177_6497185184176620114_n.jpg?_nc_ht=scontent-icn1-1.cdninstagram.com&_nc_cat=1',
+    comments: [{
       id: 1,
-      nickname: 'anjoy',
-      profileImage: 'https://scontent-icn1-1.cdninstagram.com/vp/559b8a8ece4f07cf6e7a457f600968b4/5E4BC5CB/t51.2885-15/e35/s1080x1080/72695011_515793855687177_6497185184176620114_n.jpg?_nc_ht=scontent-icn1-1.cdninstagram.com&_nc_cat=1',
-      postTitle: '테스트',
-      postContent: '대한민국의 가수 겸 탤런트. 본명은 이지은이며, 아이유(IU)는 예명이다. 아이유(IU)는 "음악으로 너와 내가 하나가 된다"라는 뜻을 가지고 있다. 2008년에 데뷔하였다. 국민 여동생이라고도 불렸다. 현 시대 여성 솔로 가수 중에서 독보적인 위치를 점하고 있는 한국 가요계의 현재진행형 레전드이자 그 어떤 장르도 소화해내는 만능형 가수라는 평가를 받는다.[22] 로엔 소속 가수 중에 듀엣이나 콜라보 없이 스스로의 힘으로 1위를 기록한 가수는 아이유가 유일하다.',
-      image: 'https://scontent-icn1-1.cdninstagram.com/vp/559b8a8ece4f07cf6e7a457f600968b4/5E4BC5CB/t51.2885-15/e35/s1080x1080/72695011_515793855687177_6497185184176620114_n.jpg?_nc_ht=scontent-icn1-1.cdninstagram.com&_nc_cat=1',
-      createdAt: new Date()
-    }, {
-      id: 1,
-      nickname: 'anjoy',
-      profileImage: 'https://scontent-icn1-1.cdninstagram.com/vp/559b8a8ece4f07cf6e7a457f600968b4/5E4BC5CB/t51.2885-15/e35/s1080x1080/72695011_515793855687177_6497185184176620114_n.jpg?_nc_ht=scontent-icn1-1.cdninstagram.com&_nc_cat=1',
-      postTitle: '테스트',
-      postContent: '대한민국의 가수 겸 탤런트. 본명은 이지은이며, 아이유(IU)는 예명이다. 아이유(IU)는 "음악으로 너와 내가 하나가 된다"라는 뜻을 가지고 있다. 2008년에 데뷔하였다. 국민 여동생이라고도 불렸다. 현 시대 여성 솔로 가수 중에서 독보적인 위치를 점하고 있는 한국 가요계의 현재진행형 레전드이자 그 어떤 장르도 소화해내는 만능형 가수라는 평가를 받는다.[22] 로엔 소속 가수 중에 듀엣이나 콜라보 없이 스스로의 힘으로 1위를 기록한 가수는 아이유가 유일하다.',
-      image: 'https://scontent-icn1-1.cdninstagram.com/vp/559b8a8ece4f07cf6e7a457f600968b4/5E4BC5CB/t51.2885-15/e35/s1080x1080/72695011_515793855687177_6497185184176620114_n.jpg?_nc_ht=scontent-icn1-1.cdninstagram.com&_nc_cat=1',
-      createdAt: new Date()
-    }, {
-      id: 1,
-      nickname: 'anjoy',
-      profileImage: 'https://scontent-icn1-1.cdninstagram.com/vp/559b8a8ece4f07cf6e7a457f600968b4/5E4BC5CB/t51.2885-15/e35/s1080x1080/72695011_515793855687177_6497185184176620114_n.jpg?_nc_ht=scontent-icn1-1.cdninstagram.com&_nc_cat=1',
-      postTitle: '테스트',
-      postContent: '대한민국의 가수 겸 탤런트. 본명은 이지은이며, 아이유(IU)는 예명이다. 아이유(IU)는 "음악으로 너와 내가 하나가 된다"라는 뜻을 가지고 있다. 2008년에 데뷔하였다. 국민 여동생이라고도 불렸다. 현 시대 여성 솔로 가수 중에서 독보적인 위치를 점하고 있는 한국 가요계의 현재진행형 레전드이자 그 어떤 장르도 소화해내는 만능형 가수라는 평가를 받는다.[22] 로엔 소속 가수 중에 듀엣이나 콜라보 없이 스스로의 힘으로 1위를 기록한 가수는 아이유가 유일하다.',
-      image: 'https://scontent-icn1-1.cdninstagram.com/vp/559b8a8ece4f07cf6e7a457f600968b4/5E4BC5CB/t51.2885-15/e35/s1080x1080/72695011_515793855687177_6497185184176620114_n.jpg?_nc_ht=scontent-icn1-1.cdninstagram.com&_nc_cat=1',
-      createdAt: new Date()
+      User: {
+        id: 1,
+        nickname: '홍섭짱',
+        profileImage: 'https://scontent-icn1-1.cdninstagram.com/vp/559b8a8ece4f07cf6e7a457f600968b4/5E4BC5CB/t51.2885-15/e35/s1080x1080/72695011_515793855687177_6497185184176620114_n.jpg?_nc_ht=scontent-icn1-1.cdninstagram.com&_nc_cat=1'
+      },
+      createdAt: new Date(),
+      content: '더미더미 덤덤 더미 댓글 홍섭짱'
     }]
-  }
+  }]
 };
-const HELLO_POST = 'HELLO_POST';
+const LOAD_MAIN_POSTS_REQUEST = 'LOAD_MAIN_POSTS_REQUEST';
+const LOAD_MAIN_POSTS_SUCCESS = 'LOAD_MAIN_POSTS_SUCCESS';
+const LOAD_MAIN_POSTS_FAILURE = 'LOAD_MAIN_POSTS_FAILURE'; // 메인 화면에 띄워질 포스트들
+
+const ADD_POST_REQUEST = 'ADD_POST_REQUEST';
+const ADD_POST_SUCCESS = 'ADD_POST_SUCCESS';
+const ADD_POST_FAILURE = 'ADD_POST_FAILURE'; // 새 포스트 업로드
+
+const LOAD_USER_POSTS_REQUEST = 'LOAD_USER_POSTS_REQUEST';
+const LOAD_USER_POSTS_SUCCESS = 'LOAD_USER_POSTS_SUCCESS';
+const LOAD_USER_POSTS_FAILURE = 'LOAD_USER_POSTS_FAILURE'; // 특정 유저 포스트 
+
+const LOAD_HASHING_POSTS_REQUEST = 'LOAD_HASHING_POSTS_REQUEST';
+const LOAD_HASHING_POSTS_SUCCESS = 'LOAD_HASHING_POSTS_SUCCESS';
+const LOAD_HASHING_POSTS_FAILURE = 'LOAD_HASHING_POSTS_FAILURE'; // 해쉬태그 클릭시 띄워질 포스트들
+// export const REMOVE_IMAGE = 'REMOVE_IMAGE'
+
+const LIKE_POST_REQUEST = 'LIKE_POST_REQUEST';
+const LIKE_POST_SUCCESS = 'LIKE_POST_SUCCESS';
+const LIKE_POST_FAILURE = 'LIKE_POST_FAILURE'; // 게시물에 좋아요
+
+const UNLIKE_POST_REQUEST = 'UNLIKE_POST_REQUEST';
+const UNLIKE_POST_SUCCESS = 'UNLIKE_POST_SUCCESS';
+const UNLIKE_POST_FAILURE = 'UNLIKE_POST_FAILURE'; // 게시물 좋아요 취소
+
+const ADD_COMMENT_REQUEST = 'ADD_COMMENT_REQUEST';
+const ADD_COMMENT_SUCCESS = 'ADD_COMMENT_SUCCESS';
+const ADD_COMMENT_FAILURE = 'ADD_COMMENT_FAILURE'; // 댓글 달기
+
+const LOAD_COMMENTS_REQUEST = 'LOAD_COMMENTS_REQUEST';
+const LOAD_COMMENTS_SUCCESS = 'LOAD_COMMENTS_SUCCESS';
+const LOAD_COMMENTS_FAILURE = 'LOAD_COMMENTS_FAILURE'; // 댓글 불러오기
+// export const RETWEET_REQUEST = 'RETWEET_REQUEST'
+// export const RETWEET_SUCCESS = 'RETWEET_SUCCESS'
+// export const RETWEET_FAILURE = 'RETWEET_FAILURE'
+
+const REMOVE_POST_REQUEST = 'REMOVE_POST_REQUEST';
+const REMOVE_POST_SUCCESS = 'REMOVE_POST_SUCCESS';
+const REMOVE_POST_FAILURE = 'REMOVE_POST_FAILURE'; // 게시글 지우기
+
 const ADD_DUMMY = 'ADD_DUMMY';
+const ADD_TEST_COMMENT = 'ADD_TEST_COMMENT';
 const ADD_POST = 'ADD_POST';
 const addDummy = {
   type: ADD_DUMMY,
@@ -3111,9 +3297,19 @@ const addDummy = {
       nickname: 'test user',
       profileImage: 'https://scontent-icn1-1.cdninstagram.com/vp/559b8a8ece4f07cf6e7a457f600968b4/5E4BC5CB/t51.2885-15/e35/s1080x1080/72695011_515793855687177_6497185184176620114_n.jpg?_nc_ht=scontent-icn1-1.cdninstagram.com&_nc_cat=1'
     },
-    image: '',
-    createdAt: new Date()
+    image: '' // createdAt: new Date(),
+
   }
+};
+const dummyComment = {
+  id: 1,
+  User: {
+    id: 1,
+    nickname: '홍섭',
+    profileImage: null
+  },
+  // createdAt: new Date(),
+  content: '더미더미 덤덤 더미 댓글 홍섭짱222'
 };
 const addPost = {
   type: ADD_POST
@@ -3121,17 +3317,115 @@ const addPost = {
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case ADD_POST:
+    case LOAD_MAIN_POSTS_REQUEST:
+      {
+        return Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, state, {
+          mainPosts: []
+        });
+      }
+
+    case LOAD_MAIN_POSTS_SUCCESS:
+      {
+        return Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, state, {
+          mainPosts: action.data
+        });
+      }
+
+    case LOAD_MAIN_POSTS_FAILURE:
       {
         return Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, state);
       }
 
-    case ADD_DUMMY:
+    case ADD_POST_REQUEST:
       {
         return Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, state, {
-          mainPosts: [action.data, ...state.mainPosts]
+          isAddingPost: true,
+          addCommentErrorReason: '',
+          postAdded: false
         });
       }
+
+    case ADD_POST_SUCCESS:
+      {
+        return Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, state, {
+          isAddingPost: false,
+          postAdded: true,
+          addPostErrorReason: ''
+        });
+      }
+
+    case ADD_POST_FAILURE:
+      {
+        return Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, state, {
+          isAddingComment: false,
+          addPostErrorReason: action.error,
+          isAddingPost: false
+        });
+      }
+
+    case ADD_COMMENT_REQUEST:
+      {
+        return Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, state, {
+          isAddingComment: true,
+          addCommentErrorReason: '',
+          commentAdded: false
+        });
+      }
+
+    case ADD_COMMENT_SUCCESS:
+      {
+        // const postIndex = state.mainPosts.findIndex(v => v.id === action.data.postId)
+        // const post = state.mainPosts[postIndex]
+        // const Comments = [...post.Comments, dummyComment]
+        // const mainPosts = [...state.mainPosts]
+        // mainPosts[postIndex] = { ...post, Comments }
+        // // 불변성을 위해 위 같이 수행한다.
+        // return{
+        //     ...state,
+        //     isAddingComment: false,
+        //     mainPosts,
+        //     commentAdded: true,
+        // }
+        const postIndex = state.userPosts.findIndex(v => v.id === action.data.postId);
+        const post = state.userPosts[postIndex];
+        const comments = [...post.comments, dummyComment];
+        const userPosts = [...state.userPosts];
+        userPosts[postIndex] = Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, post, {
+          comments
+        });
+        console.log(userPosts); // 불변성을 위해 위 같이 수행한다.
+
+        return Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, state, {
+          isAddingComment: false,
+          userPosts,
+          commentAdded: true
+        });
+      }
+
+    case ADD_COMMENT_FAILURE:
+      {
+        return Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, state, {
+          isAddingPost: false,
+          addCommentErrorReason: action.error
+        });
+      }
+    // case ADD_TEST_COMMENT: {
+    //     console.log(state.userBlog.userPosts)
+    //     const postIndex = state.userBlog.userPosts.findIndex(v => v.id === action.data.postId)
+    //     console.log(postIndex);
+    //     const post = state.userBlog.userPosts[postIndex]
+    //     console.log(post);
+    //     const comments = [...post.comments, dummyComment]
+    //     const userPosts = [...state.userBlog.userPosts]
+    //     userPosts[postIndex] = { ...post, comments }
+    //     // 불변성을 위해 위 같이 수행한다.
+    //     return{
+    //         ...state,
+    //         isAddingComment: false,
+    //         mainPosts,
+    //         commentAdded: true,
+    //     }
+    // }
 
     default:
       {
@@ -3148,7 +3442,7 @@ const reducer = (state = initialState, action) => {
 /*!**************************!*\
   !*** ./reducers/user.js ***!
   \**************************/
-/*! exports provided: initialState, SIGN_UP_REQUEST, SIGN_UP_SUCCESS, SIGN_UP_FAILURE, LOG_IN_REQUEST, LOG_IN_SUCCESS, LOG_IN_FAILURE, LOG_OUT_REQUEST, LOG_OUT_SUCCESS, LOG_OUT_FAILURE, TEST, signUpAction, loginAction, logoutAction, default */
+/*! exports provided: initialState, SIGN_UP_REQUEST, SIGN_UP_SUCCESS, SIGN_UP_FAILURE, LOG_IN_REQUEST, LOG_IN_SUCCESS, LOG_IN_FAILURE, LOG_OUT_REQUEST, LOG_OUT_SUCCESS, LOG_OUT_FAILURE, LOAD_USER_REQUEST, LOAD_USER_SUCCESS, LOAD_USER_FAILURE, LOAD_FOLLOW_REQUEST, LOAD_FOLLOW_SUCCESS, LOAD_FOLLOW_FAILURE, UNFOLLOW_USER_REQUEST, UNFOLLOW_USER_SUCCESS, UNFOLLOW_USER_FAILURE, BLOCK_USER_REQUEST, BLOCK_USER_SUCCESS, BLOCK_USER_FAILURE, TEST, signUpAction, loginAction, logoutAction, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3163,6 +3457,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LOG_OUT_REQUEST", function() { return LOG_OUT_REQUEST; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LOG_OUT_SUCCESS", function() { return LOG_OUT_SUCCESS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LOG_OUT_FAILURE", function() { return LOG_OUT_FAILURE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LOAD_USER_REQUEST", function() { return LOAD_USER_REQUEST; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LOAD_USER_SUCCESS", function() { return LOAD_USER_SUCCESS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LOAD_USER_FAILURE", function() { return LOAD_USER_FAILURE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LOAD_FOLLOW_REQUEST", function() { return LOAD_FOLLOW_REQUEST; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LOAD_FOLLOW_SUCCESS", function() { return LOAD_FOLLOW_SUCCESS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LOAD_FOLLOW_FAILURE", function() { return LOAD_FOLLOW_FAILURE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UNFOLLOW_USER_REQUEST", function() { return UNFOLLOW_USER_REQUEST; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UNFOLLOW_USER_SUCCESS", function() { return UNFOLLOW_USER_SUCCESS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UNFOLLOW_USER_FAILURE", function() { return UNFOLLOW_USER_FAILURE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BLOCK_USER_REQUEST", function() { return BLOCK_USER_REQUEST; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BLOCK_USER_SUCCESS", function() { return BLOCK_USER_SUCCESS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BLOCK_USER_FAILURE", function() { return BLOCK_USER_FAILURE; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TEST", function() { return TEST; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "signUpAction", function() { return signUpAction; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loginAction", function() { return loginAction; });
@@ -3171,7 +3477,30 @@ __webpack_require__.r(__webpack_exports__);
 
 const initialState = {
   isLoggedIn: false,
-  me: null
+  // 로그인 여부
+  isLoggingIn: false,
+  // 로그인 시도 중
+  isLoggingOut: false,
+  // 로그아웃 시도 중
+  loginErrorReason: '',
+  // 로그인 에러 사유
+  isSigningUp: false,
+  // 회원가입 시도중
+  isSignedUp: false,
+  // 회원가입 성공
+  signupErrorReason: '',
+  me: {
+    nickname: 'anjoy',
+    profileImage: 'https://scontent-icn1-1.cdninstagram.com/vp/559b8a8ece4f07cf6e7a457f600968b4/5E4BC5CB/t51.2885-15/e35/s1080x1080/72695011_515793855687177_6497185184176620114_n.jpg?_nc_ht=scontent-icn1-1.cdninstagram.com&_nc_cat=1',
+    Post: [],
+    Followings: [],
+    Followers: []
+  },
+  // 내정보
+  followingList: [],
+  followerList: [],
+  userInfo: null // 남의 정보
+
 };
 const dummyUser = {
   nickname: 'anjoy',
@@ -3190,6 +3519,19 @@ const LOG_IN_FAILURE = 'LOG_IN_FAILURE';
 const LOG_OUT_REQUEST = 'LOG_OUT_REQUEST';
 const LOG_OUT_SUCCESS = 'LOG_OUT_SUCCESS';
 const LOG_OUT_FAILURE = 'LOG_OUT_FAILURE';
+const LOAD_USER_REQUEST = 'LOAD_USER_REQUEST';
+const LOAD_USER_SUCCESS = 'LOAD_USER_SUCCESS';
+const LOAD_USER_FAILURE = 'LOAD_USER_FAILURE';
+const LOAD_FOLLOW_REQUEST = 'LOAD_FOLLOW_REQUEST';
+const LOAD_FOLLOW_SUCCESS = 'LOAD_FOLLOW_SUCCESS';
+const LOAD_FOLLOW_FAILURE = 'LOAD_FOLLOW_FAILURE';
+const UNFOLLOW_USER_REQUEST = 'UNFOLLOW_USER_REQUEST';
+const UNFOLLOW_USER_SUCCESS = 'UNFOLLOW_USER_SUCCESS';
+const UNFOLLOW_USER_FAILURE = 'UNFOLLOW_USER_FAILURE';
+const BLOCK_USER_REQUEST = 'BLOCK_USER_REQUEST';
+const BLOCK_USER_SUCCESS = 'BLOCK_USER_SUCCESS';
+const BLOCK_USER_FAILURE = 'BLOCK_USER_FAILURE'; // 유저 차단
+
 const TEST = 'TEST';
 const signUpAction = data => {
   return {
@@ -3207,27 +3549,95 @@ const logoutAction = {
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case SIGN_UP_REQUEST:
-      {
-        return Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, state, {
-          signUpDate: action.data
-        });
-      }
-
     case LOG_IN_REQUEST:
       {
         return Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, state, {
+          isLoggingIn: true,
+          loginErrorReason: ''
+        });
+      }
+
+    case LOG_IN_SUCCESS:
+      {
+        return Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, state, {
+          isLoggingIn: false,
           isLoggedIn: true,
-          me: dummyUser
+          me: action.data
+        });
+      }
+
+    case LOG_IN_FAILURE:
+      {
+        return Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, state, {
+          isLoggingIn: false,
+          isLoggedIn: false,
+          loginErrorReason: action.error,
+          me: null
         });
       }
 
     case LOG_OUT_REQUEST:
       {
         return Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, state, {
+          isLoggingOut: true
+        });
+      }
+
+    case LOG_OUT_SUCCESS:
+      {
+        return Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, state, {
+          isLoggingOut: false,
           isLoggedIn: false,
           me: null
         });
+      }
+
+    case LOG_OUT_FAILURE:
+      {
+        return Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, state, {
+          isLoggingOut: false
+        });
+      }
+
+    case SIGN_UP_REQUEST:
+      {
+        return Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, state, {
+          isSigningUp: true
+        });
+      }
+
+    case SIGN_UP_SUCCESS:
+      {
+        return Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, state, {
+          isSigningUp: false,
+          isSignedUp: true
+        });
+      }
+
+    case SIGN_UP_FAILURE:
+      {
+        return Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, state, {
+          isSigningUp: false,
+          isSignedUp: false,
+          signupErrorReason: action.error
+        });
+      }
+
+    case LOAD_USER_REQUEST:
+      {
+        return Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, state);
+      }
+
+    case LOAD_USER_SUCCESS:
+      {
+        return Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, state, {
+          me: action.data
+        });
+      }
+
+    case LOAD_USER_FAILURE:
+      {
+        return Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, state);
       }
 
     default:
@@ -3293,9 +3703,39 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return postSaga; });
 /* harmony import */ var redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux-saga/effects */ "redux-saga/effects");
 /* harmony import */ var redux_saga_effects__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _reducers_post__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../reducers/post */ "./reducers/post.js");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! antd */ "antd");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(antd__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+
+function addCommentAPI() {}
+
+function* addComment(action) {
+  try {
+    // yield delay(2000)
+    yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["put"])({
+      type: _reducers_post__WEBPACK_IMPORTED_MODULE_1__["ADD_COMMENT_SUCCESS"],
+      data: {
+        postId: action.data.postId,
+        comment: action.data.content
+      }
+    });
+  } catch (e) {
+    yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["put"])({
+      type: _reducers_post__WEBPACK_IMPORTED_MODULE_1__["ADD_COMMENT_FAILURE"],
+      error: e
+    });
+  }
+}
+
+function* watchAddComment() {
+  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["takeLatest"])(_reducers_post__WEBPACK_IMPORTED_MODULE_1__["ADD_COMMENT_REQUEST"], addComment);
+}
 
 function* postSaga() {
-  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["all"])([]);
+  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["all"])([Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["fork"])(watchAddComment)]);
 }
 
 /***/ }),
